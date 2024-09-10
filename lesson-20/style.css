@@ -1,0 +1,12 @@
+.footer, header {
+  background: rgb(224, 106, 89);
+}
+.footer {
+  height: 300px;
+}
+.header {
+  height: 60px;
+}
+.jason {
+  background: rgb(255, 130, 101);
+}
