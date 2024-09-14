@@ -1,0 +1,33 @@
+.font-1 {
+  font-family: "Open Sans", "Arial",  sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+}
+.font-2 {
+  font-family: serif;
+  font-size: 15px;
+  line-height: 20px;
+  text-decoration-line: line-through;
+}
+.font-3 {
+  font-family: serif;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  
+}
+.font-4 {
+  font-family: serif;
+  font-size: 15px;
+  line-height: 20px;
+  word-spacing: 30px;
+  text-decoration: overline wavy;
+  text-shadow: 1px 1px 2px purple;
+}
+.font-5 {
+  font-family: serif;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 5px;
+  text-decoration: underline double;
+}
