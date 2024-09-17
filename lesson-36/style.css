@@ -5,8 +5,8 @@
 }
 .div-2 {
   display: inline-block;
-  width: 350px;
-  height: 200px;
+  width: 500px;
+  height: 300px;
   overflow: auto;
   box-shadow: inset ;
   background: rgb(251, 209, 132);
