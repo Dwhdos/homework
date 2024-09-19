@@ -2,6 +2,9 @@
   overflow: auto;
   background: rgb(254, 241, 168);
   height: 400px;
+  border: 2px solid rgb(199, 166, 105);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 .div-2 {
   display: inline-block;
