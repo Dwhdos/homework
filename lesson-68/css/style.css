@@ -277,18 +277,18 @@ body {
     border-radius: 0 100px 100px 0;
     color: #1d6fb6;
     
-    /* animation: hit 1s infinite; */
-    /* animation-direction: alternate; */
+    animation: hit 1s infinite;
+    animation-direction: alternate;
 }
 
-/* @keyframes hit {
+@keyframes hit {
     0% {
         min-width: 33.9%;
     }
     100% {
-        min-width: 38,6%;
+        min-width: 38.6%;
     }
-} */
+}
 
 .product__card-wrapper {
     border: 1px solid #d0dce7;
