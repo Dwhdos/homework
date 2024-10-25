@@ -10,7 +10,7 @@ const num = [2, 4, 6, 8, 10, 12]
 function overTen (array) {
     for (let i = 0; i < array.length; i++) {
         if (array[i] > 10) {
-            return array[i]
+            console.log(array[i])
         }
     }
     return `No numbers greater than ten were found`
