@@ -1,12 +1,11 @@
 // 1) Создайте объект с вашим описанием(имя, возраст и т.д.).
-const user = [
+const user = 
     {
         name: 'Dima',
         age: 16,
         country: 'Russia',
         isAdmin: true
     }
-]
 
 console.log(user)
 
