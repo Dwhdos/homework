@@ -437,15 +437,27 @@ section:last-child {
 
 .about-inner__info__points-item {
     height: 130px;
-    width: 296px;
+    width: 248px;
     display: flex;
-    padding: 35px 23.5px;
+    align-items: center;
+    justify-content: center;
     border-radius: 20px;
     background-color: var(--bg);
 }
 
-.about-inner__info__points-item div {
+.about-inner__info__points-item__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid ;
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+}
+
+.about-inner__info__points-item__txt {
     padding-left: 15px;
+    width: 173px;
 }
 
 /* ===================================================================================== */
