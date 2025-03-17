@@ -16,6 +16,7 @@
 
 html, body {
     overflow-x: hidden;
+    scrollbar-width: none;
 }
 
 
@@ -148,6 +149,11 @@ section:last-child {
     max-width: 520px;
 }
 
+.hero__info-description {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
 .hero__girl {
     overflow: hidden;
     display: flex;
@@ -173,7 +179,6 @@ section:last-child {
     justify-content: center;
     position: relative;
     cursor: pointer;
-    z-index: 9999999999999;
 }
 
 .hero__girl-player-btn::before {
@@ -192,40 +197,60 @@ section:last-child {
 
 .hero__girl-player-txt {
     padding-left: 10px;
-    max-width: 112px;
+    max-width: 120px;
 }
 
 /* Стили для модалки */
-.video-modal {
+
+.hero_modal {
     display: none;
+    justify-content: center;
+    align-items: center;
     position: fixed;
+    background: rgba(0, 0, 0, 0.3);
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
-    z-index: 10000;
+    z-index: 100;
 }
 
-.video-container {
-    background: #fff;
-    padding: 20px;
-    position: relative;
-    max-width: 80%;
-    max-height: 80%;
-    overflow: hidden;
+.hero_modal.hero_modal--open {
+    display: flex;
 }
 
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 30px;
+.hero_modal-window {
+    border-radius: 20px;
+    width: 728px;
+    height: 450px;
+    background: var(--bg-light);
+}
+
+.hero_modal__close-btn {
+    margin-top: 10px;
+    margin-left: 694px;
+    background: none;
+    border: none;
     cursor: pointer;
 }
 
+.hero_modal__close-btn:hover path,
+.hero_modal__close-btn:hover rect {
+    stroke: var(--input);
+    transition: all .3s;
+}
+
+.hero_modal_video_video {
+    display: flex;
+    align-items: center;
+}
+
+.hero_modal_video video {
+    width: 728px;
+    border-radius: 20px;
+}
 
 /* ===================================================================================== */
 
@@ -1164,518 +1189,3 @@ footer {
     line-height: 165%;
     color: #DEC5B1;
 }
-
-/* @media (max-width: 768px) {
-    .hero__info-title h1 {
-        font-size: 48px;
-    }
-
-    .nav__list {
-        gap: 10px;
-        padding-left: 10px;
-    }
-
-    .sign-up__inner {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        padding-bottom: 20px;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: flex-start;
-    }
-
-    .sign-up__inner-application__inputs {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        width: 100%;
-    }
-
-    .input {
-        width: 100%;
-    }
-
-    .sign-up {
-        padding-bottom: 60px;
-        min-height: auto;
-        background-size: cover;
-        height: auto;
-    }
-
-    footer {
-        padding-top: 20px;
-        min-height: auto;
-        background-color: #AB8261;
-    }
-
-    .footer-inner {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .footer-inner__info-item {
-        padding-top: 25px;
-    }
-
-    .input {
-        width: 100%;
-    }
-
-    .sign-up__inner-application {
-        padding-left: 0;
-    }
-
-    .berries-right {
-        display: none;
-    }
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* @media (max-width: 1024px) {
-    .container {
-        max-width: 90%;
-    }
-
-    .header__top {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav__list {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        padding-left: 10px;
-    }
-
-    .hero {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .hero__girl {
-        width: 90%;
-    }
-
-    .hero__info {
-        max-width: 100%;
-        padding: 0 10px;
-    }
-
-    .program__inner {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .program__inner__cap {
-        width: 100%;
-    }
-
-    .reviews__container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .gallery__grid {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-}
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 42px;
-    }
-
-    h2 {
-        font-size: 28px;
-    }
-
-    .appointment__btn {
-        width: 100%;
-    }
-
-    .about-inner {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .about-inner__info {
-        width: 100%;
-    }
-
-    .sign-up {
-        padding-bottom: 60px;
-        min-height: auto;
-        background-size: cover;
-        height: auto;
-    }
-
-    .sign-up__inner {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        padding-bottom: 20px;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: flex-start;
-    }
-
-    .sign-up__inner-application__inputs {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        width: 100%;
-    }
-
-    .input {
-        width: 100%;
-    }
-
-    footer {
-        padding: 30px 0;
-        min-height: auto;
-        background-color: #AB8261;
-    }
-
-    .footer-inner {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        gap: 15px;
-    }
-
-    .footer-inner__info-item {
-        padding-top: 25px;
-    }
-
-    .sign-up__inner-application {
-        padding-left: 0;
-    }
-
-    .berries-right {
-        display: none;
-    }
-
-    .program__inner__cap-txt div {
-        width: 100%;
-        text-align: center;
-        padding: 0 15px;
-    }
-
-    .tab-controls {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .reviews__items {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .gallery__grid {
-        grid-template-columns: 1fr;
-        gap: 8px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero__girl-player {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .hero__info-title {
-        padding: 10px 15px;
-    }
-
-    .about-inner__gift-txt {
-        text-align: center;
-    }
-
-    .tab-controls {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .accordeon-list__control {
-        width: 100%;
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .accordeon-list {
-        gap: 15px;
-    }
-
-    .program__inner {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .reviews__items {
-        flex-direction: column;
-    }
-
-    .gallery__grid {
-        grid-template-columns: 1fr;
-        gap: 5px;
-    }
-
-    .footer-inner {
-        padding: 20px;
-        gap: 20px;
-    }
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ===================================================================== */
-
-/* @media (max-width: 768px) {
-    h1 {
-        font-size: 40px;
-        line-height: 1;
-    }
-
-    h2 {
-        font-size: 32px;
-    }
-
-    body {
-        font-size: 14px;
-    } 
-
-    .program__inner__cap-txt {
-        display: block;
-    }
-
-    .tab-controls-item {
-        display: inline-block;
-        width: 100px;
-
-    }
-
-
-    .nav__list {
-        flex-direction: column;
-        gap: 10px;
-        padding-left: 0;
-        padding-top: 10px;
-    }
-
-    .nav-item {
-        display: block;
-    }
-
-    .hero {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .hero__info {
-        padding-top: 20px;
-        text-align: center;
-        max-width: 100%;
-    }
-
-    .hero__info-description {
-        padding: 20px;
-        max-width: 100%;
-    }
-
-    .header__btn {
-        width: 100%;
-        padding: 15px;
-        font-size: 16px;
-    }
-
-    .hero__girl {
-        width: 100%;
-        margin-top: 20px;
-        position: relative;
-    }
-
-    .hero__girl img {
-        width: 100%;
-        height: auto;
-    }
-
-    .hero__girl-player {
-        position: absolute;
-        left: 10px;
-        bottom: 10px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        background: var(--bg-light);
-        border-radius: 20px;
-        opacity: 0.8;
-        padding: 5px;
-    }
-
-    .hero__girl-player-btn {
-        width: 50px;
-        height: 50px;
-    }
-
-    .hero__girl-player-txt {
-        display: block;
-        font-size: 12px;
-        padding-left: 10px;
-    }
-}
-
-@media (max-width: 768px) {
-    svg {
-        display: none;
-    }
-
-    .about-inner {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .about-inner__girl {
-        position: relative;
-        margin-bottom: 20px;
-    }
-
-    .about-inner__girl-women {
-        width: 100%;
-        border-radius: 10px;
-    }
-
-    .about-inner__girl__gift {
-        position: relative;
-        top: -85px;
-        left: 10px;
-        padding: 8px 10px;
-        height: 75px;
-        width: 233px;
-        background-color: rgba(149, 123, 151, 0.9);
-        color: var(--bg-light);
-        font-size: 12px;
-        text-align: center;
-    }
-
-    .about-inner__gift-btn-open {
-        width: 60px;
-        height: 60px;
-    }
-
-    .about-inner__info {
-        width: 100%;
-        padding: 0 15px;
-    }
-
-    .about-inner__info__title h1 {
-        font-size: 1px;
-    }
-
-    .about-inner__info__txt {
-        font-size: 14px;
-        padding-bottom: 20px;
-    }
-
-    .about-inner__info__points-item {
-        height: 110px;
-        padding: 20px;
-    }
-
-    .about-inner__info__points-item div {
-        font-size: 12px;
-        padding-left: 0;
-    }
-}
-
-@media (max-width: 1024px) {
-    svg {
-        width: 75%;
-        height: auto;
-    }
-
-    .about-inner {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-    .about-inner__girl__gift {
-        width: 250px;
-    }
-
-    .about-inner__info__title h1 {
-        font-size: 40px;
-    }
-
-    .about-inner__info__points-item {
-        width: 45%;
-    }
-}
-
-@media (min-width: 1200px) {
-    svg {
-        width: 24px;
-        height: 24px;
-    }
-
-    .about-inner__girl__gift {
-        width: 300px;
-        top: 405px;
-    }
-
-    .about-inner__info__points-item {
-        width: 296px;
-    }
-} */
