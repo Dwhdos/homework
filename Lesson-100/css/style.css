@@ -200,10 +200,8 @@ section:last-child {
     max-width: 120px;
 }
 
-/* Стили для модалки */
-
 .hero_modal {
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -212,13 +210,15 @@ section:last-child {
     left: 0;
     width: 100%;
     height: 100%;
-    justify-content: center;
-    align-items: center;
     z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .hero_modal.hero_modal--open {
-    display: flex;
+    visibility: visible;
+    opacity: 1;
 }
 
 .hero_modal-window {
