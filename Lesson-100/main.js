@@ -1,41 +1,65 @@
-const btn = document.querySelector('.about-inner__gift-btn-open')
-const modal = document.querySelector('.modal')
-const body = document.body
+const heroModal = document.querySelector('.hero_modal');
+const heroCloseBtn = document.querySelector('.hero_modal__close-btn');
+const heroOpenBtn = document.querySelector('.hero__girl-player-btn');
+const pageBody = document.body;
 
-const modalOpen = () => {
-    modal.classList.add('modal--open')
-    body.classList.add('body--fixed')
+const openHeroModal = () => {
+    heroModal.classList.add('hero_modal--open');
+    pageBody.classList.add('body--fixed-hero');
+};
 
-}
+const closeHeroModal = () => {
+    heroModal.classList.remove('hero_modal--open');
+    pageBody.classList.remove('body--fixed-hero');
+};
 
-const modalClose = () => {
-    modal.classList.remove('modal--open')
-    body.classList.remove('body--fixed')
-}
+heroOpenBtn.addEventListener('click', openHeroModal);
+heroCloseBtn.addEventListener('click', closeHeroModal);
 
-btn.addEventListener('click', modalOpen)
-
-modal.addEventListener('click', event => {
-    const target = event.target;
-    if (
-        target &&
-        (target.classList.contains('modal') || target.closest('.modal__close'))
-    ) {
-        modalClose();
+heroModal.addEventListener('click', event => {
+    if (event.target.classList.contains('hero_modal')) {
+        closeHeroModal();
     }
 });
 
-
-document.addEventListener('keydown', event => {
-    if (event.code === 'Escape' && modal.classList.contains('modal--open')) {
-        modalClose()
+const handleHeroModalKeydown = event => {
+    if (event.code === 'Escape' && heroModal.classList.contains('hero_modal--open')) {
+        closeHeroModal();
     }
-})
+};
 
-document.querySelector('.modal__window-recipe__email input').addEventListener('blur', function () {
-    const span = document.querySelector('.modal__window-recipe__email span');
-    span.textContent = 'Введите e-mail';
+document.addEventListener('keydown', handleHeroModalKeydown);
+
+const giftModal = document.querySelector('.modal');
+const giftOpenBtn = document.querySelector('.about-inner__gift-btn-open');
+const giftCloseBtn = giftModal.querySelector('.modal__close');
+
+const openGiftModal = () => {
+    giftModal.classList.add('modal--open');
+    pageBody.classList.add('body--fixed-gift');
+};
+
+const closeGiftModal = () => {
+    giftModal.classList.remove('modal--open');
+    pageBody.classList.remove('body--fixed-gift');
+};
+
+giftOpenBtn.addEventListener('click', openGiftModal);
+giftCloseBtn.addEventListener('click', closeGiftModal);
+
+giftModal.addEventListener('click', event => {
+    if (event.target.classList.contains('modal')) {
+        closeGiftModal();
+    }
 });
+
+const handleGiftModalKeydown = event => {
+    if (event.code === 'Escape' && giftModal.classList.contains('modal--open')) {
+        closeGiftModal();
+    }
+};
+
+document.addEventListener('keydown', handleGiftModalKeydown);
 
 
 // tabs
@@ -118,6 +142,3 @@ const feedbackSwiper = new Swiper('.feedback__slider', {
         prevEl: '.feedback__prev',
     },
 });
-
-
-
