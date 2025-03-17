@@ -19,16 +19,16 @@
                 <nav>
                     <ul class="nav__list">
                         <li class="nav-item">
-                            <a href="#">Программа обучения</a>
+                            <a href="#program">Программа обучения</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#">Галерея</a>
+                            <a href="#gallery">Галерея</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#">Отзывы</a>
+                            <a href="#feedback">Отзывы</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#">Контакты</a>
+                            <a href="#contacts">Контакты</a>
                         </li>
                     </ul>
                 </nav>
@@ -50,21 +50,35 @@
                         Записаться на курс
                     </button>
                 </div>
-                <div class="hero__girl">
+                <div class="hero__girl"> 
                     <img src="img/girl-1.png" alt="Девушка с тортом">
                     <div class="hero__girl-player">
                         <button class="hero__girl-player-btn" aria-label="Play video">
                             <img src="img/svg/play.svg" alt="">
                         </button>
                         <div class="hero__girl-player-txt">
-                            Посмотри, как готовятся наши торты
+                            Посмотри, как готовятся наши торты
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero_modal">
+                    <div class="hero_modal-window">
+                        <button class="hero_modal__close-btn" aria-label="Close">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.75" y="0.75" width="22.5" height="22.5" rx="11.25" stroke="#E1D9E1" stroke-width="1.5"></rect>
+                                <path d="M6.75793 17.2433L12.0009 12.0003L17.2439 17.2433M17.2439 6.75732L11.9999 12.0003L6.75793 6.75732" stroke="#E1D9E1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </button>
+                        <div class="hero_modal_video">
+                            <video autoplay loop src="img/cake-vid.mp4" ></video>
                         </div>
                     </div>
                 </div>
             </section>
             
             <!-- Модалка для видео -->
-            <div class="video-modal">
+            <!-- <div class="video-modal">
                 <div class="video-container">
                     <button class="close-btn">&times;</button>
                     <video controls>
@@ -72,7 +86,7 @@
                         Ваш браузер не поддерживает видео.
                     </video>
                 </div>
-            </div>
+            </div> -->
             
         </div>
     </header>
@@ -167,7 +181,7 @@
                 </div>
             </div>
         </section>
-        <section class="program">
+        <section id="program" class="program">
             <div class="container">
                 <div class="program__inner">
                     <div class="program__inner__cap">
@@ -1734,7 +1748,7 @@
                 </div>
             </div>
         </section>
-        <section class="gallery">
+        <section id="gallery" class="gallery">
             <div class="container">
                 <div class="gallery-inner">
                     <div class="gallery-inner__content">
@@ -1797,7 +1811,7 @@
 
                 </div>
         </section>
-        <section class="feedback">
+        <section id="feedback" class="feedback">
             <div class="container">
                 <div class="feedback-inner">
                     <div class="feedback-inner__content">
@@ -2198,7 +2212,7 @@
                 </div>
                 <div class="feedback__scrollbar swiper-scrollbar"></div>
         </section>
-        <section class="sign-up">
+        <section id="contacts" class="sign-up">
             <div class="container">
                 <div class="sign-up__inner">
                     <div class="sign-up__inner-imgs">
@@ -2342,8 +2356,3 @@
 </body>
 
 </html>
-
-<!-- В сслыках решетки заменить на реаьные ссылки -->
-<!-- хедер - 2 часа -->
-<!-- футер - 2 часа -->
-<!-- адаптив хедера, фетура и нижней секции - 2 часа -->
